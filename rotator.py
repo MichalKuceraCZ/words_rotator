@@ -7,7 +7,7 @@ def word_rotator_core(string_in=""):
     if type(string_in) is not str:                          # protection for a wrong input
         return False
 
-    words_list = string_in.split(" ")                       # data preparing
+    words_list = string_in.split(" /n")                       # data preparing
     words_rev_list: list = []
     _tmp: str = ""
     _commas: list = []
