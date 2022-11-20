@@ -9,12 +9,11 @@ from rotator import word_rotator_core as r_func
 # TODO redirect i/o from/to file.txt
 data_results = []
 
-with open("input_test_files.txt", encoding='utf-8') as data_rotator:
+with open("input_files/input_files.txt", encoding='utf-8') as data_rotator:
     for item in data_rotator.readlines():
         line_string = str(item)
-        data_results.append(r_func(line_string)+'\n')
+        data_results.append(r_func(line_string) + '\n')
 
-print(data_results)
 
-with open("output_file.txt", 'w+', encoding='utf-8') as output:
+with open("output_files/output_file.txt", 'w+', encoding='utf-8') as output:
     output.write(''.join([str(item) for item in data_results]))
